@@ -1,0 +1,65 @@
+.edu__list {
+  margin-top: 4rem;
+}
+
+.edu-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+  position: relative;
+}
+
+.edu-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--black);
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.edu-item:hover::after { width: 100%; }
+
+.edu-degree {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  line-height: 1.2;
+}
+
+.edu-school {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.02em;
+}
+
+.edu-detail {
+  font-size: 0.82rem;
+  color: var(--gray);
+  line-height: 1.65;
+  max-width: 520px;
+}
+
+.edu-year {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--gray);
+  white-space: nowrap;
+  padding-top: 0.4rem;
+}
+
+@media (max-width: 600px) {
+  .edu-item { grid-template-columns: 1fr; }
+  .edu-year { padding-top: 0; }
+}
+
+@media (max-width: 480px) {
+  .edu-degree { font-size: 1.35rem; }
+  .edu-item { padding: 1.8rem 0; }
+}
+

@@ -1,0 +1,34 @@
+.marquee-wrap {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 1.2rem 0;
+  background: var(--black);
+  color: var(--cream);
+}
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 22s linear infinite;
+}
+
+.marquee-item {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 2.5rem;
+  opacity: 0.75;
+}
+
+.marquee-dot {
+  width: 4px;
+  height: 4px;
+  background: #c8b89a;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}

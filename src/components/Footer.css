@@ -1,0 +1,26 @@
+.footer {
+  padding: 2.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--gray);
+}
+
+.footer__name {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.1rem;
+  color: var(--black);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+}

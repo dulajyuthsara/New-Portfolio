@@ -1,0 +1,84 @@
+.ach__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.ach-card {
+  border: 1px solid var(--border);
+  padding: 2.8rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s;
+}
+
+.ach-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(14,14,14,0.08);
+}
+
+.ach-card__ghost {
+  position: absolute;
+  top: -0.5rem; right: 1.5rem;
+  font-family: 'EB Garamond', serif;
+  font-size: 9rem;
+  font-weight: 700;
+  color: rgba(14,14,14,0.04);
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+.ach-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  position: relative;
+}
+
+.ach-host {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.ach-desc {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--gray);
+  position: relative;
+}
+
+.ach-bar {
+  height: 2px;
+  background: var(--light-gray);
+  margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.ach-bar__fill {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  background: var(--black);
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (max-width: 700px) {
+  .ach__grid { grid-template-columns: 1fr; gap: 1.2rem; }
+  .ach-card { padding: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .ach-card { padding: 1.5rem; }
+  .ach-title { font-size: 1.35rem; }
+  .ach-card__ghost { font-size: 6rem; }
+}
+
